@@ -1,0 +1,182 @@
+@Metadata.layer: #CORE
+@UI:{ headerInfo:   { typeName: 'Person',
+                      typeNamePlural: 'Cids',
+                      title: { type: #STANDARD , label: 'Person', value: 'TitleCid' }},
+     presentationVariant: [{ sortOrder: [{ by: 'Surname', direction: #ASC }] }]}
+annotate view ZAUP_WMF_CID_CDS_C with
+{
+  @UI.facet: [ { id:              'Cid',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Person',
+                 position:        10 },
+                 { id:              'Job',
+                 purpose:         #STANDARD,
+                 type:            #LINEITEM_REFERENCE,
+                 label:           'Job',
+                 position:        20,
+                 targetElement:   '_Job' } ]
+
+  @UI: { identification: [ { position: 1, label: 'CID UUID' } ] }
+  Ciduuid;
+
+  @UI: {
+      lineItem:       [ { position: 10, importance: #HIGH, cssDefault.width: '6rem'  } ],
+      identification: [ { position: 10 } ],
+      selectionField: [ { position: 10 } ] }
+  Werks;
+  
+  @UI: {
+      lineItem:       [ { position: 20, importance: #HIGH } ],
+      identification: [ { position: 20 } ],
+      selectionField: [ { position: 20 } ] }
+  Surname;
+
+  @UI: {
+      lineItem:       [ { position: 30, importance: #HIGH  } ],
+      identification: [ { position: 30 } ]}
+  Name;
+  
+  @UI: {
+      lineItem:       [ { position: 35, importance: #HIGH, cssDefault.width: '6rem'  } ],
+      identification: [ { position: 35 } ],
+      selectionField: [ { position: 35 } ] }
+  PernrSap;  
+
+  @UI: {
+      lineItem:       [ { position: 40, importance: #HIGH, cssDefault.width: '6rem'  } ],
+      identification: [ { position: 40 } ],
+      selectionField: [ { position: 40 } ] }
+  Gender;
+
+  @UI: {
+      lineItem:       [ { position: 50, importance: #HIGH  } ],
+      identification: [ { position: 50 } ],
+      selectionField: [ { position: 50 } ] }
+  BirthDate;
+
+  @UI: {
+      lineItem:       [ { position: 52 , importance: #HIGH, cssDefault.width: '10rem'} ],
+      identification: [ { position: 52} ],
+      selectionField: [ { position: 52 } ] }
+  Dept;
+  
+  @UI: {
+      lineItem:       [ { position: 53 , importance: #HIGH, cssDefault.width: '6rem'} ],
+      identification: [ { position: 53} ],
+      selectionField: [ { position: 53 } ] }
+  Type;
+  
+
+  @UI: {
+      lineItem:       [ {
+      position: 55,
+      criticality: 'StatusCriticality',
+      value: 'StatusDescr',
+      importance: #HIGH, cssDefault.width: '6rem'
+    } ],
+      identification: [ {
+      position: 55,
+      criticality: 'StatusCriticality',
+      value: 'StatusDescr',
+      importance: #HIGH
+    } ] }
+  StatusDescr;
+
+
+  @UI: {
+      lineItem:       [ { position: 60 } ],
+      identification: [ { position: 60 } ],
+      selectionField: [ { position: 60 } ] }
+  BirthCountry;
+
+
+  @UI: {
+      lineItem:       [ { position: 80 } ],
+      identification: [ { position: 80 } ] }
+  FiscalCode;
+
+
+  @UI: {
+      lineItem:       [ { position: 90 } ],
+      identification: [ { position: 90 } ],
+      selectionField: [ { position: 90 } ] }
+  PersArea;
+
+
+
+
+
+
+
+  @UI: {
+      identification: [ { position: 120 } ] }
+  FullName;
+
+  @UI: {
+      identification: [ { position: 130 } ] }
+  DateHire;
+
+  @UI: {
+      identification: [ { position: 140 } ] }
+  DateFire;
+
+
+  @UI: {
+      identification: [ { position: 150 } ] }
+  BirthCity;
+
+  @UI: {
+      identification: [ { position: 160 } ] }
+  BirthDistrict;
+
+  @UI: {
+      identification: [ { position: 170 } ] }
+  BirthState;
+
+
+
+
+  @UI: {
+      identification: [ { position: 180 } ] }
+  Citizenship;
+
+  @UI: {
+      identification: [ { position: 190 } ] }
+  Language;
+
+  @UI: {
+      lineItem:       [ { position: 200 } ],
+      identification: [ { position: 200 } ],
+      selectionField: [ { position: 200 } ] }
+  KostCenter;
+
+
+  @UI: {
+      lineItem:       [ { position: 210 },
+          { type: #FOR_ACTION, dataAction: 'setActiveCID',   label: 'Set Active CID' },
+          { type: #FOR_ACTION, dataAction: 'setInactiveCID', label: 'Set Inactive CID' } ],
+      identification: [ { position: 210 },
+          { type: #FOR_ACTION, dataAction: 'setActiveCID',   label: 'Set Active CID' },
+          { type: #FOR_ACTION, dataAction: 'setInactiveCID', label: 'Set Inactive CID' } ],
+      selectionField: [ { position: 210 } ] }
+  Status;
+
+
+
+  @UI.hidden: true
+  Begda;
+
+  @UI.hidden: true
+  Enda;
+
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+  @UI.hidden: true
+  LastChangedBy;
+  @UI.hidden: true
+  LastChangedAt;
+
+}

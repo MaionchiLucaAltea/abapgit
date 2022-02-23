@@ -1,0 +1,11 @@
+@EndUserText.label: 'AlteaUp - CID CDS - Consumption - Access Control'
+@MappingRole: true
+define role ZAUP_WMF_CID_CDS_C_AC {
+    grant
+        select
+            on
+                ZAUP_WMF_CID_CDS_C
+                    where
+                        inheriting conditions from entity ZAUP_WMF_CID_CDS_I;
+                        
+}

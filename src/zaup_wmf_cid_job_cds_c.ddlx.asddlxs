@@ -1,0 +1,37 @@
+@Metadata.layer: #CORE
+@UI:{ headerInfo:   { typeName: 'Job',
+                      typeNamePlural: 'Jobs',
+                      title: { type: #STANDARD , label: 'Job', value: 'Descr' }},
+     presentationVariant: [{ sortOrder: [{ by: 'Descr', direction: #ASC }] }]}
+annotate view ZAUP_WMF_CID_JOB_CDS_C with
+{
+
+  @UI.facet: [  { id:              'Job',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Job',
+                 position:        10 } ]
+                 
+  @UI.hidden: true
+  Ciduuid;
+  @UI: { identification: [ { position: 2, label: 'JOB UUID' } ] }
+  Jobuuid;
+
+  @UI: {
+      lineItem:       [ { position: 10 } ],
+      identification: [ { position: 10 } ]}
+  Job;
+  @UI: {
+      lineItem:       [ { position: 20 } ],
+      identification: [ { position: 20 } ]}
+  Descr;
+  @UI: {
+    lineItem:       [ { position: 30 } ],
+    identification: [ { position: 30 } ]}
+  Werks;
+  @UI.hidden: true
+  CreatedBy;
+  @UI.hidden: true
+  CreatedAt;
+
+}

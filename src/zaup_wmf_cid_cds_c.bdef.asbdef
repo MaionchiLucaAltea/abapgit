@@ -1,0 +1,26 @@
+projection;
+strict;
+
+define behavior for ZAUP_WMF_CID_CDS_C alias Cid
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use association _Job { create; }
+
+  use action setActiveCID;
+  use action setInactiveCID;
+  use action calcFiscalCode;
+
+}
+
+define behavior for ZAUP_WMF_CID_JOB_CDS_C alias Job
+use etag
+{
+  use update;
+  use delete;
+
+  use association _Cid;
+}

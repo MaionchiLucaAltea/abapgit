@@ -1,0 +1,12 @@
+@EndUserText.label: 'AlteaUp - CID CDS - Access Control'
+@MappingRole: true
+define role ZAUP_WMF_CID_CDS_AC {
+    grant
+        select
+            on
+                ZAUP_WMF_CID_CDS_I
+                    where
+                       ( Werks ) = aspect pfcg_auth(ZAUP_WMF_W, ZAUP_WMF_W, ACTVT = '03' )
+                       or true ;// WORK AROUND Because we are on ABAP ENVIRONMENT;
+                        
+}

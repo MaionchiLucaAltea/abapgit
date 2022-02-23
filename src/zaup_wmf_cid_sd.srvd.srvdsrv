@@ -1,0 +1,12 @@
+@EndUserText.label: 'AlteaUp - CID - Service Definition'
+define service ZAUP_WMF_CID_SD {
+  expose ZAUP_WMF_CID_CDS_C as Cid;
+  expose ZAUP_WMF_CID_JOB_CDS_C as Job;
+  expose ZAUP_WMF_COUNT_CDS_I as Country;
+  expose ZAUP_WMF_CTZN_CDS_I as Citizenship;
+  expose ZAUP_WMF_DEPT_CDS_I as Department;
+  expose ZAUP_WMF_JOB_I as JobLIst;
+  expose ZAUP_WMF_KOSTL_CDS_I as KostCenter;
+  expose ZAUP_WMF_PAREA_CDS_I as PersArea;
+  expose ZAUP_WMF_WERKS_CDS_I as Werks;
+}

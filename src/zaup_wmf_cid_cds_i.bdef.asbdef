@@ -1,0 +1,94 @@
+managed implementation in class zbp_aup_wmf_cid_cds_i unique;
+strict;
+
+define behavior for ZAUP_WMF_CID_CDS_I alias Cid
+persistent table zaup_wmf_cid
+lock master
+authorization master ( instance )
+etag master LastChangedAt
+{
+  create;
+  update;
+  delete;
+  association _Job { create; }
+
+  field ( numbering : managed, readonly ) Ciduuid;
+  field ( readonly ) Werks;
+  field ( readonly ) CreatedBy, CreatedAt, LastChangedBy, LastChangedAt,  Begda, Enda ;
+  field ( mandatory ) Surname, Name, BirthDate, BirthCountry, Gender, Type, FiscalCode;
+
+  action (features : instance ) setActiveCID result [1] $self;
+  action (features : instance ) setInactiveCID result [1] $self;
+  action (features : instance ) calcFiscalCode result [1] $self;
+
+  internal action checkFiscalCode;
+
+  determination setInitialStatus on modify {create;update;}
+
+  determination calculateCID on save {create;}
+
+  validation checkDate on save { field DateHire, DateFire, BirthDate; create;update;}
+  validation checkScreen on save {create;update;}
+
+  mapping for zaup_wmf_cid
+  {
+    Ciduuid = ciduuid;
+    Werks = werks;
+    PersArea = pers_area;
+    Dept = dept;
+    PernrSap = pernr_sap;
+    Begda = begda;
+    Enda = enda;
+    Name = name;
+    Surname = surname;
+    FullName = full_name;
+    DateHire = date_hire;
+    DateFire = date_fire;
+    BirthDate = birth_date;
+    BirthCity = birth_city;
+    BirthDistrict = birth_district;
+    BirthState = birth_state;
+    BirthCountry = birth_country;
+    Citizenship = citizenship;
+    Language = language;
+    FiscalCode = fiscal_code;
+    Gender = gender;
+    Status = status;
+    Type = type;
+    KostCenter = kost_center;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LastChangedBy = last_changed_by;
+    LastChangedAt = last_changed_at;
+
+  }
+}
+
+define behavior for ZAUP_WMF_CID_JOB_CDS_I alias Job
+implementation in class zbp_aup_wmf_cid_job_cds_i unique
+persistent table zaup_wmf_cid_job
+lock dependent by _Cid
+authorization dependent by _Cid
+etag master CreatedAt
+{
+  update;
+  delete;
+  field ( readonly ) Ciduuid;
+  association _Cid;
+
+  field ( numbering : managed, readonly ) Jobuuid;
+  field ( readonly ) CreatedBy, CreatedAt;
+
+  determination calculateJOB on save {create;}
+
+  mapping for zaup_wmf_cid_job
+  {
+    Ciduuid = ciduuid;
+    Jobuuid = jobuuid;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+
+  }
+
+
+}

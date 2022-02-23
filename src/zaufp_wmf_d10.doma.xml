@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DOMA" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD01V>
+    <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DATATYPE>CHAR</DATATYPE>
+    <LENG>000002</LENG>
+    <OUTPUTLEN>000002</OUTPUTLEN>
+    <VALEXI>X</VALEXI>
+    <DDTEXT>AlteaUP - WMF - Type</DDTEXT>
+    <DOMMASTER>E</DOMMASTER>
+   </DD01V>
+   <DD07V_TAB>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0001</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PO</DOMVALUE_L>
+     <DDTEXT>Production Operator</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0002</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PT</DOMVALUE_L>
+     <DDTEXT>Production Team Chief</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0003</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PC</DOMVALUE_L>
+     <DDTEXT>Production Shift Chief</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0004</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PD</DOMVALUE_L>
+     <DDTEXT>Production Department Chief</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0005</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>PP</DOMVALUE_L>
+     <DDTEXT>Production Plant Manager</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0006</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OO</DOMVALUE_L>
+     <DDTEXT>Office Operator</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0007</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OD</DOMVALUE_L>
+     <DDTEXT>Office Department Chief</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0008</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>OP</DOMVALUE_L>
+     <DDTEXT>Office Manager</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0009</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>MF</DOMVALUE_L>
+     <DDTEXT>Manager First Level</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0010</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>MS</DOMVALUE_L>
+     <DDTEXT>Manager Second Level</DDTEXT>
+    </DD07V>
+    <DD07V>
+     <DOMNAME>ZAUFP_WMF_D10</DOMNAME>
+     <VALPOS>0011</VALPOS>
+     <DDLANGUAGE>E</DDLANGUAGE>
+     <DOMVALUE_L>CO</DOMVALUE_L>
+     <DDTEXT>CEO</DDTEXT>
+    </DD07V>
+   </DD07V_TAB>
+  </asx:values>
+ </asx:abap>
+</abapGit>
